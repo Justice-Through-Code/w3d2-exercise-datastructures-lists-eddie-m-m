@@ -73,13 +73,18 @@ def create_employee_email_address():
 
     # 2.1 TODO: Let's save the lowercase version of the employee_name in a new variable 'lower_name'
     # (use a string method to lower the name). Print out the variable.
-
+    lower_name = employee_name.lower()
+    print(lower_name)
     # 2.2 TODO: We want to separate the first name and last name and save it in a variable 'names_list'
     # (use a string method to split the string into a list) Print out the variable.
-
+    names_list = lower_name.split(' ')
+    print(names_list)
     # 2.3 TODO: We want to join the first name and last name with a '.' and save it in a variable called
     # `joined_names` (use a string method to join the list into a new string) Print out the variable.
-
+    joined_names = '.'.join(names_list)
+    print(joined_names)
     # 2.4 TODO: We want to add '@ripplemedia.com' to the end of the string inside joined_names and
     # save it in a variable `email` (use an f-string to combine the username with the email domain)
     # Print out the variable.
+    email = f'{joined_names}@ripplemedia.com'
+    print(email)
